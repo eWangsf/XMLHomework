@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cart.xsd">
+	
+<Product><MusicNumber>CD-17</MusicNumber><Album>神的孩子都在跳舞</Album><Price>27.10</Price><Amount>3</Amount></Product></Cart>

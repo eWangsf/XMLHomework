@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="User.xsd">
+	<user>
+		<userName>fujunbin</userName>
+		<userPassword>123456</userPassword>
+		<Email>270@qq.com</Email>
+		<detail>
+			<name>傅俊彬</name>
+			<sex>男</sex>
+			<brithday>1993-07-27</brithday>
+			<phone>13660208627</phone>
+			<address>华南理工大学</address>
+			<zip>510006</zip>
+		</detail>
+	</user>
+	<user>
+		<userName>caijink</userName>
+		<userPassword>123456</userPassword>
+		<Email>123@qq.com</Email>
+		<detail>
+			<name>蔡进坤</name>
+			<sex>男</sex>
+			<brithday>1993-12-12</brithday>
+			<phone>12345678901</phone>
+			<address>华南理工大学</address>
+			<zip>510006</zip>
+		</detail>
+	</user>
+<user><userName>fujunbin</userName><userPassword>123456</userPassword><Email/><detail><name>傅俊彬</name><sex>male</sex><brithday>1991-11-11</brithday><phone>12345678901</phone><address>华南理工大学</address><zip>510006</zip></detail></user><user><userName>fujunbin</userName><userPassword>123456</userPassword><Email/><detail><name>傅俊彬</name><sex>male</sex><brithday>1991-11-11</brithday><phone>12345678901</phone><address>华南理工大学</address><zip>510006</zip></detail></user><user><userName>sadasd</userName><userPassword>123</userPassword><Email/><detail><name>李宁</name><sex>女</sex><brithday>1001-11-11</brithday><phone>13660208627</phone><address>中山大学</address><zip>510006</zip></detail></user><user><userName/><userPassword/><Email/><detail><name/><sex/><brithday/><phone/><address/><zip/></detail></user><user><userName>xml</userName><userPassword>345</userPassword><Email>12@qq.com</Email><detail><name>詹姆斯</name><sex>男</sex><brithday>1234-12-12</brithday><phone>12345678901</phone><address>美国</address><zip>510006</zip></detail></user><user><userName>sad</userName><userPassword>5</userPassword><Email>1@qq.com</Email><detail><name>halo</name><sex>女</sex><brithday>1111-11-11</brithday><phone>123456789</phone><address>北京</address><zip>123456</zip></detail></user><user><userName>liubei</userName><userPassword>123</userPassword><Email>123@qq.com</Email><detail><name>liubei</name><sex>男</sex><brithday>1992-10-10</brithday><phone>13660585607</phone><address>caijio</address><zip>510006</zip></detail></user><user><userName>caijinkun</userName><userPassword>123456</userPassword><Email>578245938@qq.com</Email><detail><name>蔡进坤</name><sex>男</sex><brithday>1993-10-10</brithday><phone>13660585607</phone><address>华南理工大学</address><zip>510006</zip></detail></user><user><userName>fujunbin</userName><userPassword>123456</userPassword><Email>578245938@qq.com</Email><detail><name>fujunbin</name><sex>男</sex><brithday>1993-10-10</brithday><phone>13660585607</phone><address>华南理工大学大学城校区</address><zip>510006</zip></detail></user></users>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="OrderList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="orderCount" maxOccurs="1" minOccurs="1"/>
+				<xs:element name="Order" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="OrderId" type="orderid"/>
+							<xs:element name="UserName" type="xs:string"/>
+							<xs:element name="Product" type="product"/>
+							<xs:element name="Recipient" type="recipient"/>
+							<xs:element name="PaymentMethod" type="paymethod"/>
+							<xs:element name="Remark" type="xs:string"/>
+							<xs:element name="Deliver">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="已派送"/>
+										<xs:enumeration value="未派送"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:all>
+						<xs:attribute name="date" type="date"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="product">
+		<xs:all>
+			<xs:element name="MusicNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="CD-\d+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Amount" type="xs:nonNegativeInteger"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="recipient">
+		<xs:all>
+			<xs:element name="RecipientName" type="xs:string"/>
+			<xs:element name="Address" type="xs:string"/>
+			<xs:element name="Zip">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="6"/>
+						<xs:pattern value="\d{6}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RecipientPhone">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="11"/>
+						<xs:pattern value="\d{11}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:simpleType name="date">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="orderid">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}-\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="paymethod">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="信用卡"/>
+			<xs:enumeration value="支付宝"/>
+			<xs:enumeration value="网银"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

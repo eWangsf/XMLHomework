@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Cart" type="cart"/>
+	
+	<xs:complexType name="cart">
+		<xs:sequence>
+			<xs:element name="Product" type="product" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="product">
+		<xs:sequence>
+			<xs:element name="MusicNumber" type="id"/>
+			<xs:element name="Album" type="xs:string"/>
+			<xs:element name="Price" type="xs:double"/>
+			<xs:element name="Amount" type="xs:double"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="id">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="CD-\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="MusicProduct" type="productType"/>
+	<xs:complexType name="productType">
+		<xs:sequence>
+			<xs:element name="MusicCount" type="xs:nonNegativeInteger"/>
+			<xs:element name="Music" type="CDtype" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CDtype">
+		<xs:sequence>
+			<xs:element name="MusicNumber" type="CDidtype"/>
+			<xs:element name="bigPicture" type="xs:string"/>
+			<xs:element name="smallPicture" type="xs:string"/>
+			<xs:element name="Album" type="xs:string"/>
+			<xs:element name="Singer" type="singer"/>
+			<xs:element name="Song" type="song"/>
+			<xs:element name="Language" type="language"/>
+			<xs:element name="Price" type="xs:double"/>
+			<xs:element name="Popularity" type="popularity"/>
+			<xs:element name="Storage" type="xs:int"/>
+			<xs:element name="Publisher" type="xs:string"/>
+			<xs:element name="Dealer" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="UploadDate" type="uploadDate" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="language">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="华语"/>
+			<xs:enumeration value="粤语"/>
+			<xs:enumeration value="日语"/>
+			<xs:enumeration value="韩语"/>
+			<xs:enumeration value="英语"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CDidtype">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="CD-\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="singer">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Sex" type="sex"/>
+			<xs:element name="Area" type="area"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="area">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="大陆"/>
+			<xs:enumeration value="港台"/>
+			<xs:enumeration value="日韩"/>
+			<xs:enumeration value="欧美"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sex">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="男"/>
+			<xs:enumeration value="女"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="song">
+		<xs:sequence>
+			<xs:element name="Item" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="popularity">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\*{0,6}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="uploadDate">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
